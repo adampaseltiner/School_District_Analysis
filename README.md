@@ -27,17 +27,17 @@ Filling in the 9th graders scores with NaN resulted in the following changes:
 
 ![district_summary_after](https://user-images.githubusercontent.com/82347825/118382996-2859ea00-b5c8-11eb-8a9e-61803ba94975.png)
 
-- For the school summary, we see a much larger effect since Thomas High School's passing %'s all dropped dramatically:
+- For the school summary, we see a much larger impact since Thomas High School's passing %'s all dropped dramatically:
 
 ![Thomas_before](https://user-images.githubusercontent.com/82347825/118383419-6b698c80-b5cb-11eb-8cc8-786abe714c52.png)
   
 ![Thomas_after](https://user-images.githubusercontent.com/82347825/118383421-6d335000-b5cb-11eb-8386-27fc6571b7aa.png)
 
-- Changing the 9th graders scores moved Thomas High School out of the top 5 with Overall Passing Percentage to one of the lowest, however, once those scores were omitted from the calculation Thomas High School remained one of the top performing high schools.
+- Changing the 9th graders scores moved Thomas High School out of the top 5 in Percentage Overall Passing to one of the lowest. However, once those scores were omitted from the calculation Thomas High School remained one of the top performing high schools.
 
 ![Top5PostOmission](https://user-images.githubusercontent.com/82347825/118384105-79baa700-b5d1-11eb-865b-8e0c6141aca1.png)
 
-The following are other effects noticed from the ninth-grade score replacement:
+Further observations from the ninth-grade score replacement:
 - Math and reading scores by grade remained the same for all other grades, with the ninth-grade being replaced by NaN
 
 ![Scores_by_grade](https://user-images.githubusercontent.com/82347825/118384353-71fc0200-b5d3-11eb-89d6-67a8ca7150de.png)
