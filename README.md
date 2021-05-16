@@ -6,13 +6,13 @@
 - Due to DataFrame display issues in GitHub this analysis can also be viewed in [Jupyter Notebook Viewer](https://nbviewer.jupyter.org/github/adampaseltiner/School_District_Analysis/blob/main/PyCitySchools_Challenge.ipynb)
 
 ## Overview
-For this project we analyzed data for Maria's school district to help inform her of their performance by correlating data fields such as school funding, school size, school type, and student grades. After performing our initial analysis, however, we were notified of potentially fraudulent grades submitted by 9th grade students at Thomas High School and were asked to perform the analysis again to account for the bad data. 
+For this project we analyzed data for Maria's school district to help inform her of their performance by correlating data fields such as school funding, school size, school type, and student grades. After performing our initial analysis, however, we were notified of potentially fraudulent grades submitted by ninth-grade students at Thomas High School and were asked to perform the analysis again to account for the bad data. 
 
 ## Results
 
-The first comprehensive run through the data analysis utilized the full student data set and yielded detailed results about Maria's school district. Once we received notice of the supposedly dishonest 9th grade students at Thomas High School, we needed to go back and perform our analysis again to remove their grades from the data set in hopes of getting a more accurate picture of the statistics for the school district. 
+The first comprehensive run through the data analysis utilized the full student data set and yielded detailed results about Maria's school district. Once we received notice of the supposedly dishonest ninth-grade students at Thomas High School, we needed to go back and perform our analysis again to remove their grades from the data set in hopes of getting a more accurate picture of the statistics for the school district. 
 
-To remove these grades we began by replacing all Thomas High School's 9th grader's scores with NaN:
+To remove these grades we began by replacing all Thomas High School's ninth-grade scores with NaN:
 
 ```Ruby
 # Use the loc method on the student_data_df to select all the reading scores from the 9th grade at Thomas High School and replace them with NaN.
@@ -25,7 +25,8 @@ Once we replaced an entire school's grades worth of scores, we saw the change ha
 
 ---
 
-Filling in the 9th graders scores with NaN resulted in the following changes:
+Filling in the Thomas High School's ninth-grade scores with NaN resulted in the following changes:
+
 - For the district summary: the before and after show the overall passing percentages stayed nearly the same with only tenths of a percentage difference:
 
 ![district_summary_before](https://user-images.githubusercontent.com/82347825/118382142-71a63b80-b5c0-11eb-837b-3e06ec75ba3b.png)
@@ -38,7 +39,7 @@ Filling in the 9th graders scores with NaN resulted in the following changes:
   
 ![Thomas_after](https://user-images.githubusercontent.com/82347825/118383421-6d335000-b5cb-11eb-8386-27fc6571b7aa.png)
 
-- Changing the 9th graders scores moved Thomas High School out of the top 5 in Percentage Overall Passing to one of the lowest. However, once those scores were omitted from the calculation, Thomas High School remained one of the top performing high schools.
+- Changing the ninth-grade scores moved Thomas High School out of the top 5 in Percentage Overall Passing to one of the lowest. However, once those scores were omitted from the calculation, Thomas High School remained one of the top performing high schools.
 
 ![Top5PostOmission](https://user-images.githubusercontent.com/82347825/118384105-79baa700-b5d1-11eb-865b-8e0c6141aca1.png)
 
@@ -69,7 +70,7 @@ Observations about removing the ninth-grade data from the overall district analy
   - Percent Passing Reading dropped from 86% to 85.7%
   - Percent Overall Passing dropped from 65% to 64.0%
 
-These numbers show that although we removed a large section of our data set, the overall picture for district school performance was largely unaffected. Once we drilled down to analyze the specific effects of the removal on Thomas High School's performance did we discover a significant shift in the numbers.
+These numbers show that although we removed a large section of our data set, the overall picture for district school performance was largely unaffected. Once we drilled down to analyze the specific effects of their removal on Thomas High School's performance did we discover a significant shift in the numbers (for the worse).
 
-Although it is less than ideal to remove an entire chunk of data from a data set, it was deemed necessary since it would be extremely difficult to resolve the issue of academic dishonesty within an entire school's ninth-grade before running our analysis. Overall, we saw that omitting Thomas High School's ninth-grade class rather than including their null value grades provided the most accurate picture of both the school district as a whole and for Thomas High School's individual performance amongst its peers.
+Although it is less than ideal to remove an entire chunk of data from a data set, it was deemed necessary since it would be extremely difficult to resolve the issue of academic dishonesty within an entire school's ninth-grade. Overall, we saw that omitting Thomas High School's ninth-grade class rather than including their null grade values provided the most accurate picture of both the school district as a whole and for Thomas High School's individual performance amongst its peers.
 
